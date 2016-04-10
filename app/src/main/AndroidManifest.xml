@@ -8,10 +8,11 @@
         android:minSdkVersion="8"
         android:targetSdkVersion="19" />
 
-    <android:uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <android:uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <android:uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <!-- To auto-complete the email text field in the login form with the user's emails -->
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
@@ -20,10 +21,12 @@
 
     <android:uses-permission android:name="android.permission.READ_CALL_LOG" />
 
-    <application android:label="@string/app_name">
+    <application
+        android:label="DziennikMobilny"
+        android:icon="@drawable/books">
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name">
+            android:label="DziennikMobilny">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -31,23 +34,18 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Intro"
-            android:label="@string/title_activity_intro" />
-        <activity
-            android:name=".Glowna"
-            android:label="@string/title_activity_glowna" />
-        <activity
             android:name=".MyApp"
-            android:label="Dziennik" />
-        <activity
-            android:name=".Average"
-            android:label="@string/title_activity_average" />
+            android:label="DziennikMobilny" />
         <activity
             android:name=".Accelerometer"
             android:configChanges="keyboardHidden|orientation|screenSize"
-            android:label="@string/app_name"
+            android:label="DziennikMobilny"
             android:screenOrientation="portrait" />
-        <activity android:name=".JsonList"></activity>
+        <activity
+            android:name=".JsonList"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="DziennikMobilny"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

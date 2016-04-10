@@ -13,22 +13,18 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.content.Intent;
-import com.dziennik.Accelerometer;
 
 public class MyApp extends Activity implements OnClickListener
 {
     EditText editRollno,editName,editMarks;
     Button btnAdd,btnDelete,btnModify,btnViewAll, btnAverage, btnAccelerometer, btnJson;
-    /*TextView tv;*/
     SQLiteDatabase db;
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(layout.activity_my_app);
-        /*tv=(TextView)findViewById(R.id.textView1);*/
         editRollno=(EditText)findViewById(R.id.editRollno);
         editName=(EditText)findViewById(R.id.editName);
         editMarks=(EditText)findViewById(R.id.editMarks);
@@ -132,8 +128,6 @@ public class MyApp extends Activity implements OnClickListener
             }
             Cursor c=db.rawQuery("SELECT CAST(AVG(marks) as float(10,1)) FROM student WHERE name='"+editName.getText()+"'", null);
             c.moveToFirst();
-    		/*tv.setText(c.getString(0));
-    		showMessage("Srednia", c.getString(0));*/
             StringBuffer buffer=new StringBuffer();
             buffer.append("Przedmiot: "+editName.getText()+"\n");
             buffer.append("Srednia: "+c.getString(0)+"\n");

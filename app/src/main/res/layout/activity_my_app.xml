@@ -2,42 +2,42 @@
 <AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/myLayout"
     android:stretchColumns="0"
-    android:background="@color/user_icon_8"
+    android:background="@color/user_icon_6"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_x="55dp"
+        android:layout_x="53dp"
         android:layout_y="50dp"
         android:text="ID oceny:" />
 
     <EditText android:id="@+id/editRollno"
         android:inputType="number"
-        android:layout_x="165dp"
+        android:layout_x="163dp"
         android:layout_y="50dp"
         android:layout_width="150dp"
         android:layout_height="40dp"/>
     <TextView android:text="@string/name"
-        android:layout_x="55dp"
+        android:layout_x="53dp"
         android:layout_y="100dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
     <EditText android:id="@+id/editName"
         android:inputType="text"
-        android:layout_x="165dp"
+        android:layout_x="163dp"
         android:layout_y="100dp"
         android:layout_width="150dp"
         android:layout_height="40dp"/>
     <TextView android:text="@string/marks"
-        android:layout_x="55dp"
+        android:layout_x="53dp"
         android:layout_y="150dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
     <EditText android:id="@+id/editMarks"
         android:inputType="number"
-        android:layout_x="165dp"
+        android:layout_x="163dp"
         android:layout_y="150dp"
         android:layout_width="150dp"
         android:layout_height="40dp"/>n
@@ -46,7 +46,7 @@
         android:id="@+id/btnAverage"
         android:layout_width="266dp"
         android:layout_height="40dp"
-        android:layout_x="52dp"
+        android:layout_x="50dp"
         android:layout_y="314dp"
         android:text="Średnia ocen " />
 
@@ -54,7 +54,7 @@
         android:id="@+id/btnViewAll"
         android:layout_width="130dp"
         android:layout_height="40dp"
-        android:layout_x="188dp"
+        android:layout_x="186dp"
         android:layout_y="268dp"
         android:text="Pokaż oceny" />
 
@@ -62,7 +62,7 @@
         android:id="@+id/btnModify"
         android:layout_width="130dp"
         android:layout_height="40dp"
-        android:layout_x="52dp"
+        android:layout_x="50dp"
         android:layout_y="268dp"
         android:text="Edytuj ocenę" />
 
@@ -70,7 +70,7 @@
         android:id="@+id/btnDelete"
         android:layout_width="130dp"
         android:layout_height="40dp"
-        android:layout_x="188dp"
+        android:layout_x="186dp"
         android:layout_y="222dp"
         android:text="Usuń ocenę" />
 
@@ -78,7 +78,7 @@
         android:id="@+id/btnAdd"
         android:layout_width="130dp"
         android:layout_height="40dp"
-        android:layout_x="52dp"
+        android:layout_x="50dp"
         android:layout_y="222dp"
         android:text="Dodaj ocenę" />
 
@@ -86,7 +86,7 @@
         android:id="@+id/btnJson"
         android:layout_width="266dp"
         android:layout_height="40dp"
-        android:layout_x="52dp"
+        android:layout_x="50dp"
         android:layout_y="360dp"
         android:text="Lista nauczycieli"
         android:onClick="startuj_json"/>
@@ -95,7 +95,7 @@
         android:id="@+id/btnAccelerometer"
         android:layout_width="266dp"
         android:layout_height="40dp"
-        android:layout_x="52dp"
+        android:layout_x="50dp"
         android:layout_y="406dp"
         android:text="Szczęśliwy numerek"
         android:onClick="startuj_acc"/>

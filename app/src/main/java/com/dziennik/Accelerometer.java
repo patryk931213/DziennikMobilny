@@ -28,7 +28,6 @@ public class Accelerometer extends Activity implements SensorEventListener {
 
     private ArrayList<Integer> lotteryNumbers;
 
-    /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,10 +35,6 @@ public class Accelerometer extends Activity implements SensorEventListener {
         senSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         senAccelerometer = senSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
         senSensorManager.registerListener(this, senAccelerometer , SensorManager.SENSOR_DELAY_NORMAL);
-//        for (int i = 0; i < lotteryNumbers.size(); i++) {
-//             Log.i("LOG", " @@@@@@@@" + lotteryNumbers.get(i));
-//        }
-
     }
 
     protected void onResume() {
@@ -54,7 +49,6 @@ public class Accelerometer extends Activity implements SensorEventListener {
 
     @Override
     public void onSensorChanged(SensorEvent sensorEvent) {
-        //To change body of implemented methods use File | Settings | File Templates.
         Sensor mySensor = sensorEvent.sensor;
 
         if (mySensor.getType() == Sensor.TYPE_ACCELEROMETER) {
@@ -71,7 +65,6 @@ public class Accelerometer extends Activity implements SensorEventListener {
                 float speed = Math.abs(x+y+z - last_x - last_y - last_z)/ diffTime * 10000;
 
                 if (speed > SHAKE_THRESHOLD) {
-                    Toast.makeText(this, "shake detected w/ speed: " + speed, Toast.LENGTH_SHORT).show();
                     getRandomNumber();
                 }
                 last_x = x;
@@ -82,10 +75,7 @@ public class Accelerometer extends Activity implements SensorEventListener {
     }
 
     @Override
-    public void onAccuracyChanged(Sensor sensor, int accuracy) {
-        // can be safely ignored for this demo
-    }
-
+    public void onAccuracyChanged(Sensor sensor, int accuracy) {}
 
     private void getRandomNumber() {
         ArrayList numbersGenerated = new ArrayList<Integer>();
@@ -101,9 +91,9 @@ public class Accelerometer extends Activity implements SensorEventListener {
             }
         }
         TextView text = (TextView)findViewById(R.id.number_1);
-        text.setText(""+numbersGenerated.get(0));
+        text.setText("" + numbersGenerated.get(0));
         text = (TextView)findViewById(R.id.number_2);
-        text.setText(""+numbersGenerated.get(1));
+        text.setText("" + numbersGenerated.get(1));
         text = (TextView)findViewById(R.id.number_3);
         text.setText(""+numbersGenerated.get(2));
 
